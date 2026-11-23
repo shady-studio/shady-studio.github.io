@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cloud Nine Specialty Coffee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: bright, easy, neighbourhood specialty bar; friendly, not fancy.
+IDEA: their coffee-bag label: a bold blue panel with stacked CLOUD NINE type on white.
+PICTURE: the real wooden storefront with white terrace chairs under the teal sign.
+COLOUR and TYPE: sign teal #0f9bb0 dominant, label blue #2b7fc4 support, wood orange #c9622c accent on white/sky; DM Serif Display + Readex Pro.
+LAYOUT: white hero with photo in a label-shaped frame; menu is the working centrepiece with tabs + search; locations band in teal.
+*/
+:root{color-scheme:light dark;
+--bg:light-dark(#f6fafb,#0d1b20);--card:light-dark(#fff,#142a31);--ink:light-dark(#122a31,#e6f3f6);--soft:light-dark(#557079,#9fbcc4);
+--teal:#0f9bb0;--blue:#2b7fc4;--wood:#c9622c;--line:light-dark(#dbe9ec,#24414a);--tint:light-dark(#e4f4f7,#17343c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:76px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "Readex Pro",system-ui,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1240px;margin-inline:auto}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+h1,h2,h3{font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:clamp(28px,3.6vw,42px)}
+.lat{font-family:"DM Serif Display",serif;font-weight:400}
+.sub{color:var(--soft);margin:10px 0 0;max-width:42em}
+.demo{background:#0b3e48;color:#d8f1f5;font-size:13px;text-align:center;padding:6px 12px}
+
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;padding:10px max(5vw,16px);max-width:1240px;margin-inline:auto}
+.logo{display:grid;gap:0;padding:6px 10px;background:var(--blue);color:#fff!important;border-radius:6px;text-decoration:none;font:400 15px/0.95 "DM Serif Display",serif;direction:ltr;letter-spacing:.08em}
+.logo span:nth-child(2){text-align:end}
+.links{display:flex;gap:4px;margin-inline-start:auto}
+.links a{text-decoration:none;padding:10px 12px;border-radius:10px;font-size:15px}
+.links a:hover,.links a:focus-visible{background:var(--tint);outline:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 22px;border-radius:12px;border:0;font:600 16px "Readex Pro",sans-serif;text-decoration:none;cursor:pointer}
+.btn.main{background:var(--teal);color:#fff}.btn.alt{background:var(--tint);color:var(--ink)}
+.btn:focus-visible{outline:3px solid var(--wood);outline-offset:3px}
+
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.kick{color:var(--teal);font-weight:600;margin:0 0 10px}
+.hero h1{font-size:clamp(38px,5.4vw,60px)}
+.hero h1 .lat{display:block;color:var(--blue);font-size:.7em;margin-top:6px}
+.lead{font-size:18px;color:var(--soft);margin:18px 0 26px;max-width:32em}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px}
+.chip b{color:var(--wood)}
+.label{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;max-height:620px;width:100%;box-shadow:0 24px 50px -24px rgba(11,62,72,.5)}
+.label img{width:100%;height:100%;object-fit:cover}
+.label .tag{position:absolute;inset-inline-start:16px;bottom:16px;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;font-size:14px;line-height:1.4;max-width:70%}
+.label .tag b{font:400 20px "DM Serif Display",serif;display:block;direction:ltr;text-align:start}
+
+.picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.pick img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.pick div{padding:14px 16px 18px}.pick h3{font-size:19px}
+.pick p{margin:4px 0 0;color:var(--soft);font-size:14px}
+.pick .pr{color:var(--wood);font-weight:600;white-space:nowrap}
+
+.menu{background:var(--card);border:1px solid var(--line);border-radius:22px;margin-top:26px;overflow:hidden}
+.mtop{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px;border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:6px;overflow-x:auto;flex:1 1 420px;scroll-snap-type:x mandatory}
+.tabs button{flex:none;scroll-snap-align:start;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 15px "Readex Pro",sans-serif;cursor:pointer;direction:ltr}
+.tabs button[aria-selected=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+.tabs button:focus-visible{outline:3px solid var(--wood);outline-offset:2px}
+.search{flex:1 1 220px;min-height:46px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:10px 14px;font:16px "Readex Pro",sans-serif}
+.search:focus-visible{outline:2px solid var(--teal)}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;padding:6px clamp(16px,3vw,34px) 18px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.row .n{direction:ltr;text-align:right;font-weight:500}
+.row small{display:block;color:var(--soft);font-size:13px;direction:rtl}
+.row .p{white-space:nowrap;font-weight:600;color:var(--blue)}
+.mnote{color:var(--soft);font-size:13px;padding:0 clamp(16px,3vw,34px) 18px;margin:0}
+.empty{padding:24px;color:var(--soft)}
+
+.beans{background:var(--blue);color:#fff}
+.beans .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.beans img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;max-height:560px}
+.beans p{color:#dcecf8}
+.spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+.spec div{background:rgba(255,255,255,.1);border-radius:12px;padding:12px 14px}
+.spec span{display:block;font-size:13px;color:#cfe3f4}.spec b{font-weight:600}
+
+.strip img{width:100%;height:clamp(160px,22vw,260px);object-fit:cover;border-radius:18px}
+.revs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+blockquote p{margin:0 0 12px;font-size:17px}blockquote footer{color:var(--soft);font-size:14px}
+.stars{color:var(--wood);letter-spacing:2px}
+
+.visit{background:var(--teal);color:#fff}
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.visit h3{font-size:21px;margin-bottom:6px}.visit p{margin:0;color:#e2f6f9}
+.num{white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+.social{display:flex;gap:12px;margin-top:14px}
+.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16)}
+.social a:hover,.social a:focus-visible{background:#fff;outline:none}
+.social a:hover svg,.social a:focus-visible svg{fill:var(--teal)}
+.social svg{width:22px;height:22px;fill:#fff}
+footer.site{background:#0b3e48;color:#bfe0e6;font-size:14px;padding:22px max(5vw,16px);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:900px){.vgrid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.hero .wrap,.beans .wrap{grid-template-columns:minmax(0,1fr)}.rows,.revs{grid-template-columns:minmax(0,1fr)}.links{display:none}.label{max-height:460px}.beans img{max-height:380px}}
+@media(max-width:620px){.picks{grid-template-columns:minmax(0,1fr)}.pick img{aspect-ratio:4/3}}
+@media(max-width:420px){.spec{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="demo">نسخة تجريبية مقترحة لموقع Cloud Nine — الصور والمنيو من صفحات الكافيه</div>
+<header>
+  <nav class="nav" aria-label="القائمة الرئيسية">
+    <a class="logo" href="#top" aria-label="Cloud Nine"><span>CLOUD</span><span>NINE</span></a>
+    <div class="links"><a href="#picks">المفضلين</a><a href="#menu">المنيو</a><a href="#beans">البن</a><a href="#visit">الفروع</a></div>
+    <a class="btn main" href="#menu">شوف المنيو</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="band hero">
+  <div class="wrap">
+    <div>
+      <p class="kick">Specialty Coffee · Fresh Bakeries</p>
+      <h1>قهوتك المفضلة، في أهدى ركن في زايد<span class="lat">Cloud Nine Specialty Coffee</span></h1>
+      <p class="lead">سبيشالتي كوفي، ماتشا، ومخبوزات طازة كل يوم. قعدة برا وجوا، واي فاي للشغل، ومكان بيرحب بالحيوانات الأليفة.</p>
+      <div class="cta"><a class="btn main" href="#menu">شوف المنيو والأسعار</a><a class="btn alt" href="#visit">الفروع والمواعيد</a></div>
+      <div class="chips">
+        <span class="chip"><b>4.5 ★</b> من 217 تقييم على Google</span>
+        <span class="chip">🐾 Pet friendly</span>
+        <span class="chip"><span class="num">7 AM – 1 AM</span></span>
+      </div>
+    </div>
+    <figure class="label" style="margin:0">
+      <img src="img/storefront.jpg" alt="واجهة Cloud Nine الخشب مع ترابيزات بيضا برا" fetchpriority="high">
+      <figcaption class="tag"><b>Cloud Nine</b>فرع Zayed Dunes Hub</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="picks" style="padding-top:0">
+  <div class="wrap">
+    <h2>اللي الناس بترجعلنا عشانه</h2>
+    <p class="sub">من أكتر الحاجات اللي بتتطلب وبتتصور عندنا.</p>
+    <div class="picks" id="pk"></div>
+  </div>
+</section>
+
+<section class="band" id="menu" aria-labelledby="mh" style="background:var(--tint)">
+  <div class="wrap">
+    <h2 id="mh">المنيو</h2>
+    <p class="sub">المنيو كامل بالأسعار. الصفحة دي ليها لينك ثابت يتحط في QR على الترابيزات.</p>
+    <div class="menu">
+      <div class="mtop">
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <input class="search" id="q" type="search" placeholder="دوّر في المنيو… مثلاً Spanish" aria-label="دوّر في المنيو">
+      </div>
+      <div class="rows" id="rows" role="tabpanel" aria-live="polite"></div>
+      <p class="mnote" id="mnote"></p>
+    </div>
+  </div>
+</section>
+
+<section class="band beans" id="beans">
+  <div class="wrap">
+    <img src="img/beans.jpg" alt="أكياس بن Cloud Nine من البرازيل، São Paulo" loading="lazy">
+    <div>
+      <h2>خد بننا معاك البيت</h2>
+      <p>بن سبيشالتي بنختاره وبنحمّصه، متاح في الفروع بأكياس 250 جرام. ابعتلنا على انستجرام أو واتساب عشان تعرف المتاح.</p>
+      <div class="spec">
+        <div><span>الأصل</span><b class="num">Brazil · São Paulo</b></div>
+        <div><span>النكهات</span><b>شوكولاتة، خوخ، عسل</b></div>
+        <div><span>المعالجة</span><b class="num">Natural</b></div>
+        <div><span>الارتفاع</span><b class="num">1000–1300 masl</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="reviews">
+  <div class="wrap">
+    <div class="strip"><img src="img/bar-view.jpg" alt="البار ومكنة الإسبريسو قدام جنينة خضرا" loading="lazy"></div>
+    <h2 style="margin-top:34px">ضيوفنا بيقولوا <span class="stars" aria-label="4.5 من 5">★★★★★</span></h2>
+    <div class="revs">
+      <blockquote><p lang="en" dir="ltr">“Delicious coffee. The overall vibe is calm and cozy, perfect for relaxing or getting some work done.”</p><footer>تقييم على Google</footer></blockquote>
+      <blockquote><p lang="en" dir="ltr">“I tried Spanish latte coffee and it tasted really good. The place is quiet and very nice and the prices are good.”</p><footer>تقييم على Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="band visit" id="visit">
+  <div class="wrap vgrid">
+    <div><h3>Zayed Dunes Hub</h3><p>شارع الشباب، تاني الشيخ زايد</p><p style="margin-top:10px"><a href="https://maps.app.goo.gl/Z8sU6JWLYSFpyK2DA">افتح على خرائط جوجل</a></p></div>
+    <div><h3>المواعيد</h3><p>السبت للخميس: 7 الصبح لـ 1 بالليل</p><p>الجمعة: 1 الضهر لـ 1 بالليل</p></div>
+    <div><h3>تواصل معانا</h3><p>تليفون وواتساب: <span class="num">010 0063 9806</span></p>
+      <div class="social">
+        <a href="https://wa.me/201000639806" aria-label="واتساب" title="واتساب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+        <a href="https://www.instagram.com/cloudnine_eg/" aria-label="انستجرام" title="انستجرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3 0-4.1.1-1 0-1.8.2-2.4.5a5 5 0 0 0-1.8 1.1A5 5 0 0 0 2.6 5.5c-.3.6-.4 1.4-.5 2.4C2 9 2 9.3 2 12s0 3 .1 4.1c0 1 .2 1.8.5 2.4a5 5 0 0 0 1.1 1.8 5 5 0 0 0 1.8 1.1c.6.3 1.4.4 2.4.5H12c2.7 0 3 0 4.1-.1 1 0 1.8-.2 2.4-.5a5.2 5.2 0 0 0 2.9-2.9c.3-.6.4-1.4.5-2.4V12c0-2.7 0-3-.1-4.1 0-1-.2-1.8-.5-2.4a5 5 0 0 0-1.1-1.8 5 5 0 0 0-1.8-1.1c-.6-.3-1.4-.4-2.4-.5H12Zm0 1.8h4c1 .1 1.5.2 1.8.4.5.2.8.4 1.1.7.4.4.6.7.8 1.2.1.3.3.8.3 1.7.1 1.1.1 1.4.1 4.2s0 3.1-.1 4.2c0 .9-.2 1.4-.3 1.7a3.4 3.4 0 0 1-1.9 2c-.3.1-.8.2-1.7.3H12c-2.7 0-3.1 0-4.2-.1-.9 0-1.4-.2-1.7-.3a3 3 0 0 1-1.1-.7 3 3 0 0 1-.8-1.2c-.1-.3-.3-.8-.3-1.7V12c0-2.7 0-3.1.1-4.2 0-.9.2-1.4.3-1.7.2-.5.4-.8.8-1.2.3-.3.6-.5 1.1-.7.3-.1.8-.3 1.7-.3H12Z"/></svg></a>
+        <a href="https://www.facebook.com/CloudNine.Egypt/" aria-label="فيسبوك" title="فيسبوك"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site"><span>© Cloud Nine Specialty Coffee · Sheikh Zayed</span><span>تصميم وتطوير: Shady Studio</span></footer>
+
+<script>
+{
+const picks=[
+ {img:"matcha.jpg",t:"Mango & Strawberry Matcha",d:"ماتشا ساقعة بالمانجو أو الفراولة",p:"200 ج.م"},
+ {img:"hot-chocolate.jpg",t:"Hot Chocolate",d:"موسم الهوت شوكليت رجع",p:"180 ج.م"},
+ {img:"latte-cheesecake.jpg",t:"Latte & Lotus Cheesecake",d:"لاتيه مع تشيزكيك اللوتس في برطمان",p:"من 125 ج.م"}
+];
+document.getElementById('pk').innerHTML=picks.map(x=>`<article class="pick"><img src="img/${x.img}" alt="${x.t}" loading="lazy"><div><h3 class="lat" dir="ltr" style="text-align:right">${x.t}</h3><p>${x.d}</p><p class="pr">${x.p}</p></div></article>`).join('');
+
+const M={
+"Hot Coffee":[["Espresso",90],["Americano",105],["Cortado",115],["Classic Macchiato",115],["Caramel Macchiato",160],["Flat White",120],["Latte","125 / 135"],["Cappuccino","125 / 135"],["Mocha",160],["White Mocha",160],["Caramel Latte",160,"متاح بسكر دايت"],["Vanilla Latte",160,"متاح بسكر دايت"],["Hazelnut Latte",160,"متاح بسكر دايت"],["Spanish Latte",160],["Pistachio Latte",160],["Salted Caramel Latte",160],["Honey Cinnamon Latte",160],["Dulce de Leche Latte",160],["Turkish Coffee",65],["V60",180]],
+"Iced Coffee":[["Iced Americano",105],["Iced Latte",150],["Iced Spanish Latte",170],["Iced Caramel Macchiato",170],["Iced Caramel Latte",170,"متاح بسكر دايت"],["Iced Hazelnut Latte",170,"متاح بسكر دايت"],["Iced Vanilla Latte",170,"متاح بسكر دايت"],["Iced Mocha",170],["Iced White Mocha",170],["Iced Salted Caramel Latte",170],["Iced Honey Cinnamon Latte",170],["Iced Dulce de Leche Latte",170],["Iced Banana Caramel Latte",170],["Iced Pistachio",170],["Iced V60",180]],
+"Matcha":[["Hot Matcha Latte",145],["Hot Honey Matcha",170],["Hot Spanish Matcha",170],["Hot Salted Caramel Matcha",190],["Hot Caramel Matcha",165,"متاح بسكر دايت"],["Hot Vanilla Matcha",165,"متاح بسكر دايت"],["Iced Matcha Latte",155],["Iced Honey Matcha",180],["Iced Spanish Matcha",180],["Iced Salted Caramel Matcha",200],["Iced Caramel Matcha",175,"متاح بسكر دايت"],["Iced Vanilla Matcha",175,"متاح بسكر دايت"],["Iced Strawberry Matcha",200],["Iced Mango Matcha",200]],
+"Non Coffee":[["Black Tea",60],["Black Tea with Milk",70],["Flavored Hot Tea",70],["Hot Cider",70],["Hot Chocolate",180],["Sahlab",120],["Iced Tea by Cloud Nine",95],["Iced Blended Chocolate",190],["Fresh Juice",105],["Greek Yogurt Milkshake",175]],
+"Mojito Cans":[["Mojito Original",120],["Mojito Flavored",120,"بينا كولادا، مانجو، باشون فروت، توت، كرز، بطيخ، كيوي، خوخ، فراولة… أو اعمل مكسك"],["Redbull Mojito Original",165],["Redbull Mojito Flavored",165]],
+"Milkshakes":[["Vanilla Milkshake",155],["Lotus / Pistachio Milkshake",175],["Mango / Strawberry / Berries Milkshake",175]],
+"Protein Shakes":[["Vanilla Protein Shake",180],["Chocolate Protein Shake",180],["Strawberry Protein Shake",180],["Caramel Protein Shake",195],["Salted Caramel Protein Shake",195],["Kinder / Nutella / Lotus Protein Shake",195],["Pistachio Protein Shake",195],["Peanut Butter Protein Shake",195],["Coffee Frappe Protein Shake",195]],
+"Extras":[["Alternative Milk (Alpro)",55,"جوز هند، لوز، شوفان"],["Syrup / Sauce",45],["Honey",45],["Banana",20],["Lactose Free Milk",45],["Full Cream / Skimmed Milk",25]]
+};
+const NOTES={"Iced Coffee":"+10 ج.م للبليندد · +30 ج.م للحجم الكبير (كانز)","Matcha":"اختار اللبن اللي تحبه · +10 ج.م للبليندد · +30 ج.م للحجم الكبير","Milkshakes":"+30 ج.م للحجم الكبير","Mojito Cans":"+30 ج.م للحجم الكبير","Protein Shakes":"في كانز · إضافات: عسل، لبن نباتي، زبدة فول سوداني، كرياتين، شوت إسبريسو"};
+const cats=Object.keys(M),tabs=document.getElementById('tabs'),rows=document.getElementById('rows'),note=document.getElementById('mnote'),q=document.getElementById('q');
+let cur=0;
+tabs.innerHTML=cats.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===0}" data-i="${i}">${c}</button>`).join('');
+const row=([n,p,s])=>`<div class="row"><div class="n">${n}${s?`<small>${s}</small>`:''}</div><span class="p">${p} ج.م</span></div>`;
+function show(i){cur=i;q.value='';[...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',j===i));rows.setAttribute('aria-labelledby','t'+i);rows.innerHTML=M[cats[i]].map(row).join('');note.textContent=NOTES[cats[i]]||'';}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(+b.dataset.i)});
+tabs.addEventListener('keydown',e=>{let n=cur;if(e.key==='ArrowLeft')n=Math.min(cats.length-1,cur+1);if(e.key==='ArrowRight')n=Math.max(0,cur-1);if(n!==cur){show(n);tabs.children[n].focus();tabs.children[n].scrollIntoView({block:'nearest',inline:'nearest'})}});
+q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();if(!t){show(cur);return}
+  const hits=cats.flatMap(c=>M[c].filter(x=>x[0].toLowerCase().includes(t)).map(x=>[x[0]+' · '+c,x[1],x[2]]));
+  [...tabs.children].forEach(b=>b.setAttribute('aria-selected','false'));
+  rows.innerHTML=hits.length?hits.map(row).join(''):`<p class="empty">مفيش صنف بالاسم ده. جرّب كلمة تانية زي Latte أو Matcha.</p>`;note.textContent='';});
+show(0);
+}
+</script>
+</body>
+</html>
