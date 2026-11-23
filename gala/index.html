@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GALA Cosmopolitan Cuisine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=El+Messiri:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: an art-gallery restaurant: confident, warm, a little theatrical.
+IDEA: a gallery wall card: big Didone GALA wordmark, framed pictures, captions like exhibit labels.
+PICTURE: their own penne in a copper pan on the wine-red lacquered table, parmesan falling.
+COLOUR and TYPE: wine #5a1730 dominant, cream #f5efe6 support, cobalt #2340a0 accent (their logo and plates), copper for small lines; Bodoni Moda + El Messiri + Tajawal.
+LAYOUT: wine hero band, cream gallery sections with framed photos, menu card with tabs + search, cobalt branches band.
+*/
+:root{color-scheme:light dark;
+--bg:light-dark(#f5efe6,#1a0e13);--card:light-dark(#fffaf3,#26161d);--ink:light-dark(#2a1418,#f3e7e3);--soft:light-dark(#6e5458,#c3a9ad);
+--wine:#5a1730;--cobalt:light-dark(#2340a0,#7d97ef);--copper:#c07a3d;--line:light-dark(#e6d9cb,#3c2630)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:76px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Tajawal",system-ui,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}a{color:inherit}
+.wrap{max-width:1240px;margin-inline:auto}
+.band{padding:clamp(40px,6vw,92px) max(5vw,16px)}
+h1,h2,h3{font-family:"El Messiri",serif;font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,3.8vw,44px)}
+.bod{font-family:"Bodoni Moda",serif;font-weight:500}
+.sub{color:var(--soft);margin:10px 0 0;max-width:42em}
+.demo{background:#2b0b17;color:#f0dce2;font-size:13px;text-align:center;padding:6px 12px}
+
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--wine) 95%,transparent);color:#fff;backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;gap:18px;padding:10px max(5vw,16px);max-width:1240px;margin-inline:auto}
+.word{font:700 28px/1 "Bodoni Moda",serif;letter-spacing:.12em;text-decoration:none;direction:ltr}
+.links{display:flex;gap:4px;margin-inline-start:auto}
+.links a{text-decoration:none;padding:10px 12px;border-radius:8px;font-size:16px;color:#f1e1e5}
+.links a:hover,.links a:focus-visible{background:rgba(255,255,255,.12);outline:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 22px;border-radius:2px;border:0;font:700 16px "Tajawal",sans-serif;text-decoration:none;cursor:pointer}
+.btn.cob{background:#2340a0;color:#fff}.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
+.btn:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+.hero{background:var(--wine);color:#fff}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,72px);align-items:center}
+.big{font:700 clamp(64px,10vw,128px)/.9 "Bodoni Moda",serif;letter-spacing:.06em;direction:ltr;text-align:start;margin:0 0 6px}
+.tag{font:italic 500 clamp(18px,2vw,24px) "Bodoni Moda",serif;color:#e8c9a6;direction:ltr;text-align:start;margin:0 0 22px}
+.hero h1{font-size:clamp(28px,3.4vw,40px)}
+.lead{color:#ecd8dc;max-width:32em;margin:14px 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;flex-wrap:wrap;gap:26px;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:15px;color:#e2c9ce}
+.facts b{display:block;color:#fff;font-size:21px}
+.frame{margin:0;background:#fffaf3;padding:14px 14px 0;box-shadow:0 30px 60px -24px rgba(0,0,0,.6)}
+.frame img{aspect-ratio:4/5;object-fit:cover;width:100%;max-height:600px}
+.frame figcaption{color:#5a1730;font:italic 500 15px "Bodoni Moda",serif;padding:10px 2px 12px;direction:ltr;text-align:left}
+
+.space{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.space .frame{background:var(--card)}.space .frame figcaption{color:var(--soft)}
+.pts{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.pts li{padding:12px 16px;background:var(--card);border-inline-start:3px solid var(--copper)}
+
+.menu{background:var(--card);border:1px solid var(--line);margin-top:26px}
+.mtop{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:14px;border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:6px;overflow-x:auto;flex:1 1 460px;scroll-snap-type:x mandatory}
+.tabs button{flex:none;scroll-snap-align:start;min-height:44px;padding:8px 16px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 15px "Tajawal",sans-serif;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--wine);border-color:var(--wine);color:#fff}
+.tabs button:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+.search{flex:1 1 220px;min-height:46px;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:10px 14px;font:16px "Tajawal",sans-serif}
+.search:focus-visible{outline:2px solid var(--cobalt)}
+.rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;padding:6px clamp(16px,3vw,34px) 14px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row h4{margin:0;font:700 17px "Tajawal",sans-serif}
+.row .en{display:block;font:italic 500 16px "Bodoni Moda",serif;color:var(--cobalt);direction:ltr;text-align:right}
+.row p{margin:2px 0 0;color:var(--soft);font-size:14px;line-height:1.5}
+.row .p{white-space:nowrap;font-weight:700;color:var(--wine)}
+:root[data-theme=dark] .row .p{color:#e8a3b6}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .row .p{color:#e8a3b6}}
+.mnote{color:var(--soft);font-size:13px;padding:0 clamp(16px,3vw,34px) 18px;margin:0}
+.empty{padding:24px;color:var(--soft)}
+
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:26px}
+.duo .frame{background:var(--card)}.duo .frame figcaption{color:var(--soft)}
+.duo .frame img{aspect-ratio:1}
+
+.revs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);padding:24px}
+blockquote p{margin:0 0 12px;font:italic 500 20px/1.5 "Bodoni Moda",serif}
+blockquote footer{color:var(--soft);font-size:14px}
+.stars{color:var(--copper);letter-spacing:2px}
+
+.visit{background:#2340a0;color:#fff}
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.visit h3{font-size:22px;margin-bottom:6px}.visit p{margin:0;color:#dbe2fb}
+.num{white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+.social{display:flex;gap:12px;margin-top:14px}
+.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.15)}
+.social a:hover,.social a:focus-visible{background:#fff;outline:none}
+.social a:hover svg,.social a:focus-visible svg{fill:#2340a0}
+.social svg{width:22px;height:22px;fill:#fff}
+footer.site{background:#2b0b17;color:#d9bfc6;font-size:14px;padding:22px max(5vw,16px);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:900px){.vgrid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.hero .wrap,.space{grid-template-columns:minmax(0,1fr)}.rows,.revs{grid-template-columns:minmax(0,1fr)}.links{display:none}.frame img{max-height:440px}}
+@media(max-width:480px){.duo{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="demo">نسخة تجريبية مقترحة لموقع GALA — الصور من صفحات المطعم</div>
+<header>
+  <nav class="nav" aria-label="القائمة الرئيسية">
+    <a class="word" href="#top">GALA</a>
+    <div class="links"><a href="#space">المكان</a><a href="#menu">المنيو</a><a href="#reviews">آراء الضيوف</a><a href="#visit">الفروع</a></div>
+    <a class="btn cob" href="#menu">المنيو</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="band hero">
+  <div class="wrap">
+    <div>
+      <p class="big">GALA</p>
+      <p class="tag">cosmopolitan cuisine</p>
+      <h1>أكل من كل مطابخ العالم، في مكان معمول زي معرض فني</h1>
+      <p class="lead">بيتزا نابوليتان بعجينة بنعملها بإيدينا، باستا طازة، ستيك، سوشي تاكو وأطباق آسيوية. من الفطار لحد آخر الليل في Walk of Cairo.</p>
+      <div class="cta"><a class="btn cob" href="#menu">شوف المنيو والأسعار</a><a class="btn line" href="#visit">الفروع والمواعيد</a></div>
+      <div class="facts">
+        <div><b>4.7 <span class="stars" aria-hidden="true">★</span></b>من 245 تقييم على Google</div>
+        <div><b class="num">9 AM – 11:30 PM</b>Walk of Cairo</div>
+        <div><b>زايد ومراسي</b>وفروع تانية</div>
+      </div>
+    </div>
+    <figure class="frame">
+      <img src="img/penne.jpg" alt="بيني بولونيز في طاسة نحاس ورشة بارميزان" fetchpriority="high">
+      <figcaption>Penne alla Bolognese — the last shower of parmesan</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="space">
+  <div class="wrap space">
+    <figure class="frame"><img src="img/space-art.jpg" alt="كراسي عليها لوحات بورتريه في صالة GALA" loading="lazy"><figcaption>The space — GALA Marassi</figcaption></figure>
+    <div>
+      <h2>المكان نفسه جزء من التجربة</h2>
+      <p class="sub">كل ركن في GALA متصمم كأنه لوحة: كراسي عليها بورتريهات، فازات حمرا منحوتة، وألوان النبيتي والأزرق الكوبالت في كل تفصيلة. تصميم المعمارية Rana Chaar.</p>
+      <ul class="pts">
+        <li>فطار من الصبح، وغدا وعشا لحد بالليل</li>
+        <li>قعدة جوا وبرا، مناسبة للعزومات والاحتفالات</li>
+        <li>عجينة البيتزا والباستا بتتعمل في المطبخ</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="menu" aria-labelledby="mh" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="mh">المنيو</h2>
+    <p class="sub">منيو كامل بالأسعار، بيفتح على أي موبايل، وليه لينك ثابت يتحط في QR على كل ترابيزة.</p>
+    <div class="menu">
+      <div class="mtop">
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <input class="search" id="q" type="search" placeholder="دوّر في المنيو… مثلاً سلمون" aria-label="دوّر في المنيو">
+      </div>
+      <div class="rows" id="rows" role="tabpanel" aria-live="polite"></div>
+      <p class="mnote">الأسعار بالجنيه من آخر منيو منشور أونلاين، وبتتحدّث من المطعم.</p>
+    </div>
+    <div class="duo">
+      <figure class="frame"><img src="img/dough.jpg" alt="عجينة بيتزا بتتعجن بالإيد" loading="lazy"><figcaption>Napoli, made by hand</figcaption></figure>
+      <figure class="frame"><img src="img/smoothie-bowl.jpg" alt="سموذي بول بالمانجا والجرانولا" loading="lazy"><figcaption>Smoothie bowls — GALA Marassi</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <h2>ضيوفنا بيقولوا <span class="stars" aria-label="4.7 من 5">★★★★★</span></h2>
+    <div class="revs">
+      <blockquote><p lang="en" dir="ltr">“Polite staff, beautiful aesthetic and good food!”</p><footer>تقييم على Google</footer></blockquote>
+      <blockquote><p lang="en" dir="ltr">“The food was delicious. Definitely try the carrot and ginger soup.”</p><footer>تقييم على Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="band visit" id="visit">
+  <div class="wrap vgrid">
+    <div><h3>Walk of Cairo · الشيخ زايد</h3><p>مبنى B07، محل G09، Walk of Cairo، طريق مصر إسكندرية الصحراوي</p><p style="margin-top:8px">تليفون: <span class="num">011 5818 8864</span></p><p style="margin-top:8px"><a href="https://www.google.com/maps/place/?q=place_id:ChIJcXnxAABZWBQRLtZ7v0WXZ2w">افتح على خرائط جوجل</a></p></div>
+    <div><h3>المواعيد في زايد</h3><p>الأحد للأربع: 9 الصبح لـ 11:30 بالليل</p><p>الخميس للسبت: 9 الصبح لـ 12 بالليل</p></div>
+    <div><h3>GALA Marassi</h3><p>قدام بوابة 2، مراسي، الساحل الشمالي</p><p style="margin-top:8px">تليفون: <span class="num">010 4148 7195</span></p>
+      <div class="social">
+        <a href="https://wa.me/201158188864" aria-label="واتساب" title="واتساب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+        <a href="https://www.instagram.com/gala.egypt/" aria-label="انستجرام" title="انستجرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3 0-4.1.1-1 0-1.8.2-2.4.5a5 5 0 0 0-1.8 1.1A5 5 0 0 0 2.6 5.5c-.3.6-.4 1.4-.5 2.4C2 9 2 9.3 2 12s0 3 .1 4.1c0 1 .2 1.8.5 2.4a5 5 0 0 0 1.1 1.8 5 5 0 0 0 1.8 1.1c.6.3 1.4.4 2.4.5H12c2.7 0 3 0 4.1-.1 1 0 1.8-.2 2.4-.5a5.2 5.2 0 0 0 2.9-2.9c.3-.6.4-1.4.5-2.4V12c0-2.7 0-3-.1-4.1 0-1-.2-1.8-.5-2.4a5 5 0 0 0-1.1-1.8 5 5 0 0 0-1.8-1.1c-.6-.3-1.4-.4-2.4-.5H12Zm0 1.8h4c1 .1 1.5.2 1.8.4.5.2.8.4 1.1.7.4.4.6.7.8 1.2.1.3.3.8.3 1.7.1 1.1.1 1.4.1 4.2s0 3.1-.1 4.2c0 .9-.2 1.4-.3 1.7a3.4 3.4 0 0 1-1.9 2c-.3.1-.8.2-1.7.3H12c-2.7 0-3.1 0-4.2-.1-.9 0-1.4-.2-1.7-.3a3 3 0 0 1-1.1-.7 3 3 0 0 1-.8-1.2c-.1-.3-.3-.8-.3-1.7V12c0-2.7 0-3.1.1-4.2 0-.9.2-1.4.3-1.7.2-.5.4-.8.8-1.2.3-.3.6-.5 1.1-.7.3-.1.8-.3 1.7-.3H12Z"/></svg></a>
+        <a href="https://www.facebook.com/galabyilloft/" aria-label="فيسبوك" title="فيسبوك"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site"><span class="bod">© GALA cosmopolitan cuisine</span><span>تصميم وتطوير: Shady Studio</span></footer>
+
+<script>
+{
+const M={
+"الفطار":[["Scrambled Eggs with Truffle","بيض مخفوق مع ترافل","مع سلطة خضرا وبطاطس أو بطاطا مشوية",198],["Eggs Benedict Croissant","كرواسون بنديكت","بيض بوشيه وصوص بنجر",137.5],["Veggie Omelette","أومليت خضار","",145],["Turkey & Cheese Omelette","أومليت رومي وجبنة","",183],["Camembert & Mushroom Omelette","أومليت مشروم وكاممبير","",169],["Breakfast Meal 1","وجبة فطار 1","بريتزل، أومليت، زبدة وعسل ومربى، كرواسون، عصير برتقال ومشروب سخن",299],["Breakfast Meal 2","وجبة فطار 2","بريتزل، تشكيلة جبن مستورد، كرواسون، عصير برتقال ومشروب سخن",349],["Club Sandwich","كلوب ساندوتش","فراخ مشوية، رومي مدخن، بيض وجبن",249],["Gala's Homemade Pancake","بان كيك جالا","فواكه الموسم وشوكولاتة وميبل",157.14]],
+"المقبلات":[["Salmon Tataki","سلمون تاتاكي","سلمون طازة وصوص بونزو",264],["Tuna Tataki","تونة تاتاكي","ثوم مقرمش وفجل حار",264],["Artichoke & Spinach Dip","ديب خرشوف وسبانخ","بارميزان وموتزاريلا مع كروستيني",199],["Burrata","بوراتا","طماطم شيري، جرجير وبيستو طماطم",275],["Caprese di Bufala","كابريزي دي بوفالا","موتزاريلا بافلو وباذنجان مقلي",198],["Almond Shrimps","جمبري باللوز","",229],["Shrimp Taco","تاكو جمبري","توبيكو ومايونيز حار",229],["Beef Taco","تاكو لحم","فيليه ومايونيز واسابي",229],["Risotto Balls","كرات ريزوتو","محشية موتزاريلا وبولونيز",248],["Patate al Tartufo","بطاطس بالترافل","بارميزان وصوص ترافل",148],["Carrot & Ginger Soup","شوربة جزر وزنجبيل","",98],["Truffle Mushroom Soup","شوربة مشروم ترافل","",143]],
+"البيتزا":[["Marinara","مارينارا","ثوم وصلصة طماطم وأوريجانو",144],["Margherita","مارجريتا","موتزاريلا وصلصة طماطم",227],["Salamino","سلامينو","بيبروني وموتزاريلا",270],["Carne","كارني","سجق، بيبروني وموتزاريلا",320],["Gamberetti","جامبيريتي","جمبري، ليمون وبيكورينو",335],["Tonno","تونو","تونة وثوم وبقدونس",295],["Bianca al Salmone","بيانكا بالسلمون","سلمون مدخن وشبت وكابر",320],["Tartufo","تارتوفو","مشروم بورشيني وبيكورينو ترافل",354],["Quattro Formaggi","كواترو فورماجي","موتزاريلا، بارميزان، بري وبلو تشيز",269],["Verdure","فيردوري","كوسة، باذنجان، زيتون ومشروم",229]],
+"الباستا والريزوتو":[["Penne alla Bolognese","بيني بولونيز","صوص بولونيز بيتي",241],["Spaghetti al Pomodoro","إسباجيتي بومودورو","طماطم شيري وريحان",140],["Spaghetti Cacio e Pepe","إسباجيتي كاتشو إي بيبي","ترافل وبيكورينو وفلفل أسود",249],["Alfredo Linguine","لينجويني ألفريدو","فراخ ومشروم وصوص كريمي",289],["Tagliatelle di Salmone","تالياتيلي بالسلمون","سلمون مدخن وصوص روزيه",299],["Ravioli al Tartufo","رافيولي ترافل","بورشيني وصوص ترافل كريمي",295],["Lasagna Bolognese","لازانيا بولونيز","",241],["Risotto ai Funghi Misti","ريزوتو مشروم","بورشيني وبارميزان",323],["Risotto al Limone","ريزوتو بالليمون","جمبري وجبنة مدخنة",359],["Gnocchi alla Sorrentina","نيوكي سورنتينا","موتزاريلا بافلو وصلصة طماطم",159],["Gnocchi al Pesto","نيوكي بيستو","صنوبر وريحان",176]],
+"الأطباق الرئيسية":[["Local Steak Frites","ستيك فريتس","ستيك وبطاطس",344],["Rib Eye Steak","ريب آي ستيك","على الفحم مع بطاطس ودجز وخضار",735],["Filetto di Manzo","فيليه بقري مشوي","فيليه جنوب أفريقي وصوص أعشاب",399],["Beef Teriyaki","بيف ترياكي","رز ياسمين بالجنزبيل",465],["Beef Stroganoff","بيف ستروجانوف","",390],["Thai Stir Fried Beef","لحم تايلاندي","خضار وصوص أويستر",344],["Chicken Teriyaki","تشيكن ترياكي","",339],["Chicken Panang","تشيكن بانانج","كاري حار بجوز الهند",299],["Chicken Escalope","تشيكن إسكالوب","",325],["Petto di Pollo","صدور فراخ مشوية","",338],["Salmon Teriyaki","سلمون ترياكي","",474],["Shrimp Curry Coconut","جمبري كاري وجوز هند","",436]],
+"السلطات والساندوتشات":[["Caesar Salad","سلطة سيزر","",147],["Il Loft Salad","سلطة إل لوفت","تفاح أخضر، تين مجفف وجبنة ماعز",194],["Avocado Salad","سلطة أفوكادو","",198],["Chicken Quinoa Kale Salad","سلطة كينوا وكيل بالفراخ","",263],["Salmon & Mango Salad","سلطة سلمون ومانجو","",298],["Crispy Crab Salad","سلطة كابوريا كرسبي","",239],["Shrimp Salad","سلطة جمبري","",320],["Truffle Beef Burger","برجر ترافل","مشروم ترافل وبورتوبيلو",295],["Stuffed Cheese Beef Burger","برجر محشي جبنة","",286],["Steak Sando","ستيك ساندو","صوص تونكاتسو",229],["Chicken & Avocado Sandwich","ساندوتش فراخ وأفوكادو","",199],["Simply Salmon Sandwich","ساندوتش سلمون","",258]],
+"المشروبات":[["Orange Juice","عصير برتقال","",62],["Mango Juice","عصير مانجو","",69],["Strawberry Juice","عصير فراولة","",59],["Minted Lemonade","ليمون بالنعناع","",60],["Green Juice L","جرين جوس L","جزر، تفاح، ليمون وزنجبيل",89],["Green Juice F","جرين جوس F","تفاح، سبانخ، نعناع، زنجبيل وأناناس",109],["Passion Fruit Mojito","موهيتو باشون فروت","",89],["Strawberry Mojito","موهيتو فراولة","",95],["Iced Latte","آيس لاتيه","",59],["Gala Oreo","جالا أوريو","",115],["Iced Tea","آيس تي","",69]]
+};
+const cats=Object.keys(M),tabs=document.getElementById('tabs'),rows=document.getElementById('rows'),q=document.getElementById('q');let cur=0;
+tabs.innerHTML=cats.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===0}" data-i="${i}">${c}</button>`).join('');
+const fmt=n=>Number.isInteger(n)?n:n.toFixed(2).replace(/0$/,'');
+const row=([en,ar,d,p])=>`<div class="row"><div><h4>${ar}<span class="en">${en}</span></h4>${d?`<p>${d}</p>`:''}</div><span class="p">${fmt(p)} ج.م</span></div>`;
+function show(i){cur=i;[...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',j===i));rows.setAttribute('aria-labelledby','t'+i);rows.innerHTML=M[cats[i]].map(row).join('')}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b){q.value='';show(+b.dataset.i)}});
+tabs.addEventListener('keydown',e=>{let n=cur;if(e.key==='ArrowLeft')n=Math.min(cats.length-1,cur+1);if(e.key==='ArrowRight')n=Math.max(0,cur-1);if(n!==cur){q.value='';show(n);tabs.children[n].focus();tabs.children[n].scrollIntoView({block:'nearest',inline:'nearest'})}});
+q.addEventListener('input',()=>{const t=q.value.trim().toLowerCase();if(!t){show(cur);return}
+  const hits=cats.flatMap(c=>M[c].filter(x=>(x[0]+' '+x[1]+' '+x[2]).toLowerCase().includes(t)));
+  [...tabs.children].forEach(b=>b.setAttribute('aria-selected','false'));
+  rows.innerHTML=hits.length?hits.map(row).join(''):`<p class="empty">مفيش صنف بالاسم ده. جرّب كلمة تانية زي بيتزا أو Salmon.</p>`});
+show(0);
+}
+</script>
+</body>
+</html>
