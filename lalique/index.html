@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lalique Zayed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: hushed, elegant hotel-restaurant; few hues, fine silver detail, lots of air.
+IDEA: the Lalique placemat and napkin: dusty mauve leather on marble, a silver eight-petal mark.
+PICTURE: their own breakfast-on-the-terrace photo, large, framed like a printed menu card.
+COLOUR and TYPE: plum #4a3550 dominant, marble #f3eee8 support, warm citrus #d99a2b accent; Cormorant Garamond + Amiri for titles, Plex Arabic body.
+LAYOUT: full-bleed plum hero band, then marble sections; menu is a tabbed card with its own #menu link for the QR.
+*/
+:root{color-scheme:light dark;
+--bg:light-dark(#f3eee8,#1d1520);--card:light-dark(#fffdfa,#2a1f2e);--ink:light-dark(#2a2029,#f1e9ef);
+--soft:light-dark(#6f6170,#bfaebd);--plum:#4a3550;--plum2:light-dark(#8a6a7c,#a7889a);--line:light-dark(#e2d8d4,#3e3042);
+--silver:#d6d1da;--citrus:#d99a2b}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "IBM Plex Sans Arabic",system-ui,sans-serif;overflow-x:clip}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin-inline:auto}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+h1,h2,h3{font-family:"Amiri","Cormorant Garamond",serif;font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(30px,4vw,44px)}
+.en{font-family:"Cormorant Garamond",serif;font-weight:500;letter-spacing:.01em}
+.demo{background:#2c1f31;color:#e9dfe7;font-size:13px;text-align:center;padding:6px 12px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--plum) 94%,transparent);backdrop-filter:blur(8px);color:#fff}
+.nav{display:flex;align-items:center;gap:20px;padding:10px max(5vw,16px);max-width:1240px;margin-inline:auto;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600;letter-spacing:.18em}
+.links{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
+.links a{text-decoration:none;padding:10px 12px;border-radius:8px;font-size:15px;color:#efe6ee}
+.links a:hover,.links a:focus-visible{background:rgba(255,255,255,.12);outline:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 22px;border-radius:999px;border:0;font:600 16px "IBM Plex Sans Arabic",sans-serif;text-decoration:none;cursor:pointer}
+.btn.gold{background:var(--citrus);color:#241a10}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* hero */
+.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 90% at 85% 10%,rgba(214,209,218,.16),transparent 60%);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,72px);align-items:center;position:relative}
+.kick{color:var(--silver);font-size:15px;margin:0 0 10px}
+.hero h1{font-size:clamp(40px,6vw,64px)}
+.hero h1 .en{display:block;font-size:.62em;color:var(--silver);margin-top:8px;font-style:italic}
+.hero p.lead{font-size:18px;color:#eadfe8;max-width:34em;margin:18px 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18)}
+.facts div{font-size:14px;color:#d8cbd6}.facts b{display:block;font-size:22px;color:#fff;font-weight:600}
+.frame{position:relative;border-radius:22px 22px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);aspect-ratio:4/5;max-height:640px;margin-inline:auto;width:100%}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame figcaption{position:absolute;inset-inline:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(30,18,34,.85));font-size:14px;color:#efe6ee}
+
+/* signature */
+.sig{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:32px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.dish img{aspect-ratio:1;object-fit:cover;width:100%}
+.dish div{padding:14px 16px 18px}
+.dish h3{font-size:20px}.dish h3 .en{display:block;font-size:17px;color:var(--plum2)}
+.dish p{margin:6px 0 0;color:var(--soft);font-size:15px}
+.sub{color:var(--soft);max-width:40em;margin:10px 0 0}
+
+/* menu */
+.menuband{background:linear-gradient(var(--bg),var(--bg))}
+.menu{background:var(--card);border:1px solid var(--line);border-radius:24px;margin-top:28px;overflow:hidden}
+.tabs{display:flex;gap:6px;padding:12px;overflow-x:auto;border-bottom:1px solid var(--line);scroll-snap-type:x mandatory}
+.tabs button{flex:none;scroll-snap-align:start;min-height:44px;padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 15px "IBM Plex Sans Arabic",sans-serif;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--plum);border-color:var(--plum);color:#fff}
+.tabs button:focus-visible{outline:3px solid var(--citrus);outline-offset:2px}
+.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;padding:10px clamp(16px,3vw,36px) 26px}
+.item{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.item>div{flex:1}.item h4{margin:0;font:600 17px "IBM Plex Sans Arabic",sans-serif}
+.item h4 .en{display:block;font-size:17px;color:var(--plum2);font-weight:500}
+.item p{margin:2px 0 0;color:var(--soft);font-size:14px}
+.price{white-space:nowrap;color:var(--plum2);font-size:14px;align-self:center}
+.note{font-size:13px;color:var(--soft);padding:0 clamp(16px,3vw,36px) 20px;margin:0}
+
+/* booking */
+.book{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.bookimg{border-radius:22px;overflow:hidden;min-height:320px}.bookimg img{width:100%;height:100%;object-fit:cover}
+form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,34px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+form h2{grid-column:1/-1}form .sub{grid-column:1/-1;margin:0 0 6px}
+label{display:grid;gap:6px;font-size:14px;color:var(--soft)}
+input,select,textarea{font:16px "IBM Plex Sans Arabic",sans-serif;min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--plum2);outline-offset:1px}
+.full{grid-column:1/-1}
+.done{grid-column:1/-1;display:none;background:color-mix(in srgb,var(--citrus) 16%,var(--card));border-radius:14px;padding:14px 16px}
+.done.show{display:block}
+.done a{font-weight:600}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+blockquote p{margin:0 0 14px;font-size:16px}
+blockquote footer{font-size:14px;color:var(--soft)}
+.stars{color:var(--citrus);letter-spacing:2px}
+.score{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.score b{font-family:"Cormorant Garamond",serif;font-size:56px;line-height:1;color:var(--plum2)}
+
+/* visit */
+.visit{background:var(--plum);color:#fff}
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.visit h3{font-size:22px;margin-bottom:6px}.visit p{margin:0;color:#e3d6e1}
+.visit a{color:#fff}
+.social{display:flex;gap:12px;margin-top:14px}
+.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);transition:background .2s}
+.social a:hover,.social a:focus-visible{background:var(--citrus);outline:none}
+.social a:hover svg,.social a:focus-visible svg{fill:#241a10}
+.social svg{width:22px;height:22px;fill:#fff}
+.num{white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+footer.site{background:#2c1f31;color:#cbbcc8;font-size:14px;padding:22px max(5vw,16px);display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+
+@media(max-width:900px){.sig{grid-template-columns:repeat(2,minmax(0,1fr))}.revs,.vgrid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.hgrid,.book{grid-template-columns:minmax(0,1fr)}.items{grid-template-columns:minmax(0,1fr)}.frame{max-height:460px}.links{display:none}.bookimg{min-height:220px;max-height:280px}}
+@media(max-width:480px){form{grid-template-columns:minmax(0,1fr)}.sig{gap:12px}.dish h3{font-size:18px}.facts{gap:18px}}
+</style>
+</head>
+<body>
+<div class="demo">نسخة تجريبية مقترحة لموقع Lalique — كل الصور من صفحة المطعم</div>
+
+<header>
+  <nav class="nav" aria-label="القائمة الرئيسية">
+    <a class="brand" href="#top" aria-label="Lalique">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#5d4565" stroke="#d6d1da" stroke-width="1"/><g fill="none" stroke="#e7e2ea" stroke-width="1.3"><use href="#p"/><use href="#p" transform="rotate(45 20 20)"/><use href="#p" transform="rotate(90 20 20)"/><use href="#p" transform="rotate(135 20 20)"/><use href="#p" transform="rotate(180 20 20)"/><use href="#p" transform="rotate(225 20 20)"/><use href="#p" transform="rotate(270 20 20)"/><use href="#p" transform="rotate(315 20 20)"/></g><defs><path id="p" d="M20 20 C17.6 16.5 18 12.5 20 9.5 C22 12.5 22.4 16.5 20 20Z"/></defs></svg>
+      <b>LALIQUE</b>
+    </a>
+    <div class="links">
+      <a href="#dishes">أطباقنا</a><a href="#menu">المنيو</a><a href="#book">الحجز</a><a href="#reviews">آراء الضيوف</a><a href="#visit">الموقع</a>
+    </div>
+    <a class="btn gold" href="#book">احجز ترابيزة</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero band">
+  <div class="wrap hgrid">
+    <div>
+      <p class="kick">مطعم وكافيه · Arabic Mall، الشيخ زايد</p>
+      <h1>مطبخ من كل العالم، على ترابيزة واحدة<span class="en">Kitchen of the world</span></h1>
+      <p class="lead">فطار على التراس، غدا وعشا، وقعدة لحد الفجر. أطباق عالمية متقدمة بشكل فندقي، في مكان هادي وراقي في قلب زايد.</p>
+      <div class="cta"><a class="btn gold" href="#book">احجز ترابيزة</a><a class="btn ghost" href="#menu">شوف المنيو</a></div>
+      <div class="facts">
+        <div><b>4.9 <span class="stars" aria-hidden="true">★</span></b>من 319 تقييم على Google</div>
+        <div><b class="num">8 AM – 3 AM</b>مفتوحين كل يوم</div>
+        <div><b>صالة وتراس</b>أكل في المكان أو تيك أواي</div>
+      </div>
+    </div>
+    <figure class="frame" style="margin:0">
+      <img src="img/breakfast-terrace.jpg" alt="فطار Lalique على التراس، مع عصير برتقال وتمثال المطعم في الخلفية" fetchpriority="high">
+      <figcaption>فطار Lalique على التراس</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="dishes">
+  <div class="wrap">
+    <h2>أطباق بتتكلم عن نفسها</h2>
+    <p class="sub">من أكتر الأطباق اللي ضيوفنا بيصوروها ويرجعوا عشانها.</p>
+    <div class="sig" id="sig"></div>
+  </div>
+</section>
+
+<section class="band menuband" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <h2 id="menu-h">المنيو</h2>
+    <p class="sub">الصفحة دي ليها لينك ثابت، فممكن نحطه في QR على كل ترابيزة والضيف يشوف المنيو من موبايله.</p>
+    <div class="menu">
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div class="items" id="items" role="tabpanel" aria-live="polite"></div>
+      <p class="note">الأصناف من صفحات Lalique. الأسعار والمنيو الكامل بيتضافوا من منيو المطعم الرسمي.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="book">
+  <div class="wrap book">
+    <div class="bookimg"><img src="img/breakfast-spread.jpg" alt="ترابيزة فطار عليها عصير برتقال وأومليت وتوست" loading="lazy"></div>
+    <form id="bf" novalidate>
+      <h2>احجز ترابيزتك</h2>
+      <p class="sub">املا البيانات والحجز يوصلنا على واتساب في ثانية.</p>
+      <label>الاسم<input id="fn" name="name" required autocomplete="name"></label>
+      <label>رقم الموبايل<input id="fp" name="phone" type="tel" inputmode="tel" required autocomplete="tel" dir="ltr"></label>
+      <label>اليوم<input id="fd" name="date" type="date" required></label>
+      <label>الساعة<input id="ft" name="time" type="time" required value="20:00"></label>
+      <label>عدد الأشخاص<select id="fg" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8+</option></select></label>
+      <label>المكان<select id="fa" name="area"><option>الصالة</option><option>التراس</option><option>مش فارقة</option></select></label>
+      <label class="full">ملاحظات (عيد ميلاد، كرسي أطفال…)<textarea id="fx" name="notes" rows="2"></textarea></label>
+      <button class="btn gold full" type="submit">جهّز الحجز</button>
+      <div class="done" id="done" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section class="band" id="reviews">
+  <div class="wrap">
+    <div class="score"><h2>ضيوفنا بيقولوا</h2><b>4.9</b><span class="stars" aria-label="5 من 5">★★★★★</span><span style="color:var(--soft)">319 تقييم على Google</span></div>
+    <div class="revs">
+      <blockquote><p lang="en" dir="ltr">“Everything was absolutely amazing! 10/10 experience from start to finish.”</p><footer>Salma Hakiim · Google</footer></blockquote>
+      <blockquote><p lang="en" dir="ltr">“The atmosphere was lovely, the service was excellent, and everything made the visit truly enjoyable.”</p><footer>Kareem Saleh · Google</footer></blockquote>
+      <blockquote><p>“طلبنا شوربة مشروم كانت لذيذة لدرجة نسيت أصورها.”</p><footer>Ibrahim Almutahhir · Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="band visit" id="visit">
+  <div class="wrap vgrid">
+    <div><h3>العنوان</h3><p>Arabic Mall، البستان، أول الشيخ زايد، الجيزة</p><p style="margin-top:10px"><a href="https://www.google.com/maps/place/?q=place_id:ChIJe6WfAhlZWBQRTQQ3dOqrKLw">افتح على خرائط جوجل</a></p></div>
+    <div><h3>المواعيد</h3><p>كل يوم من 8 الصبح لحد 3 الفجر</p></div>
+    <div><h3>تواصل معانا</h3><p>تليفون وواتساب: <span class="num">012 8307 7772</span></p><div class="social">
+        <a href="https://wa.me/201283077772" aria-label="واتساب" title="واتساب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+        <a href="https://www.instagram.com/lalique.restaurant_eg/" aria-label="انستجرام" title="انستجرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3 0-4.1.1-1 0-1.8.2-2.4.5a5 5 0 0 0-1.8 1.1A5 5 0 0 0 2.6 5.5c-.3.6-.4 1.4-.5 2.4C2 9 2 9.3 2 12s0 3 .1 4.1c0 1 .2 1.8.5 2.4a5 5 0 0 0 1.1 1.8 5 5 0 0 0 1.8 1.1c.6.3 1.4.4 2.4.5H12c2.7 0 3 0 4.1-.1 1 0 1.8-.2 2.4-.5a5.2 5.2 0 0 0 2.9-2.9c.3-.6.4-1.4.5-2.4V12c0-2.7 0-3-.1-4.1 0-1-.2-1.8-.5-2.4a5 5 0 0 0-1.1-1.8 5 5 0 0 0-1.8-1.1c-.6-.3-1.4-.4-2.4-.5H12Zm0 1.8h4c1 .1 1.5.2 1.8.4.5.2.8.4 1.1.7.4.4.6.7.8 1.2.1.3.3.8.3 1.7.1 1.1.1 1.4.1 4.2s0 3.1-.1 4.2c0 .9-.2 1.4-.3 1.7a3.4 3.4 0 0 1-1.9 2c-.3.1-.8.2-1.7.3H12c-2.7 0-3.1 0-4.2-.1-.9 0-1.4-.2-1.7-.3a3 3 0 0 1-1.1-.7 3 3 0 0 1-.8-1.2c-.1-.3-.3-.8-.3-1.7V12c0-2.7 0-3.1.1-4.2 0-.9.2-1.4.3-1.7.2-.5.4-.8.8-1.2.3-.3.6-.5 1.1-.7.3-.1.8-.3 1.7-.3H12Z"/></svg></a>
+        <a href="https://www.facebook.com/Lalique.restaurant.eg/" aria-label="فيسبوك" title="فيسبوك"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></a>
+      </div></div>
+  </div>
+</section>
+</main>
+<footer class="site"><span>© Lalique Restaurant &amp; Café · Sheikh Zayed</span><span>تصميم وتطوير: شادي</span></footer>
+
+<script>
+{
+const dishes=[
+ {img:"ribeye.jpg",ar:"ريب آي ستيك",en:"Rib Eye Steak",d:"مع صوص مشروم وبطاطس ودجز وسلطة خضرا"},
+ {img:"miso-chicken.jpg",ar:"ميسو تشيكن",en:"Miso Chicken",d:"فراخ بصوص كريمي مع خضار كونفي وطماطم مجففة"},
+ {img:"breakfast-plate.jpg",ar:"فطار Lalique",en:"Lalique Breakfast",d:"بيض، سجق، مشروم، دانش، كرواسون وشيدر"},
+ {img:"mocktail.jpg",ar:"موكتيل فريش",en:"Fresh Mocktail",d:"توت ونعناع وروزماري على تلج"}
+];
+document.getElementById('sig').innerHTML=dishes.map(x=>`<article class="dish"><img src="img/${x.img}" alt="${x.ar}" loading="lazy"><div><h3>${x.ar}<span class="en">${x.en}</span></h3><p>${x.d}</p></div></article>`).join('');
+
+const menu={
+ "الفطار":[["فطار Lalique","Lalique Breakfast","بيض مقلي، سجق فراخ ولحمة، مشروم، دانش، كرواسون، بطاطس ودجز، شيدر وعصير برتقال"],["أومليت","Omelette","مع مشروم وسلطة وتوست"],["كرواسون ودانش","Croissant & Danish","مخبوزات طازة كل يوم"]],
+ "البيتزا":[["بيتزا بيبروني","Pepperoni Pizza","من الفرن الحجري"],["بيتزا ستيك باربكيو","BBQ Steak Pizza","شرايح ستيك وصوص باربكيو"],["بيتزا مشروم ترافل","Mushroom Truffle Pizza","مشروم وزيت ترافل"]],
+ "الأطباق الرئيسية":[["ريب آي ستيك","Rib Eye Steak","صوص مشروم، بطاطس ودجز وسلطة"],["ميسو تشيكن","Miso Chicken","خضار كونفي، بطاطا، جزر وطماطم مجففة"],["باستا جمبري","Shrimp Pasta","صوص كريمي"],["ريزوتو","Risotto","أرز أربوريو كريمي"],["شوربة مشروم","Mushroom Soup","من أكتر الأصناف اللي الضيوف بيمدحوها"]],
+ "الحلو":[["تيراميسو","Tiramisu in Glass Cup","في كاس"],["كب كيك شوكولاتة","Chocolate Cupcake","بالفروستنج"]],
+ "المشروبات":[["عصير برتقال فريش","Fresh Orange Juice",""],["موكتيل فريش","Fresh Mocktail","توت ونعناع وروزماري"],["قهوة ومشروبات سخنة","Coffee & Hot Drinks",""],["شيشة","Shisha","نكهات متنوعة"]]
+};
+const tabs=document.getElementById('tabs'),items=document.getElementById('items');
+const cats=Object.keys(menu);
+tabs.innerHTML=cats.map((c,i)=>`<button role="tab" id="t${i}" aria-selected="${i===0}" data-i="${i}">${c}</button>`).join('');
+function show(i){
+  [...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',j===i));
+  items.setAttribute('aria-labelledby','t'+i);
+  items.innerHTML=menu[cats[i]].map(([ar,en,d])=>`<div class="item"><div><h4>${ar}<span class="en">${en}</span></h4>${d?`<p>${d}</p>`:''}</div><span class="price">السعر قريباً</span></div>`).join('');
+}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(+b.dataset.i)});
+tabs.addEventListener('keydown',e=>{const cur=[...tabs.children].findIndex(b=>b.getAttribute('aria-selected')==='true');let n=cur;if(e.key==='ArrowLeft')n=Math.min(cats.length-1,cur+1);if(e.key==='ArrowRight')n=Math.max(0,cur-1);if(n!==cur){show(n);tabs.children[n].focus();tabs.children[n].scrollIntoView({block:'nearest',inline:'nearest'})}});
+show(0);
+
+const fd=document.getElementById('fd');const today=new Date();fd.min=today.toISOString().slice(0,10);fd.value=fd.min;
+document.getElementById('bf').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const done=document.getElementById('done');
+  if(!v('fn')||!v('fp')){done.className='done show';done.textContent='اكتب الاسم ورقم الموبايل عشان نأكد الحجز.';return}
+  const msg=`حجز جديد من الموقع\nالاسم: ${v('fn')}\nالموبايل: ${v('fp')}\nاليوم: ${v('fd')}\nالساعة: ${v('ft')}\nعدد الأشخاص: ${v('fg')}\nالمكان: ${v('fa')}${v('fx')?`\nملاحظات: ${v('fx')}`:''}`;
+  const url='https://wa.me/201283077772?text='+encodeURIComponent(msg);
+  done.className='done show';
+  done.innerHTML=`الحجز جاهز. <a href="${url}">اضغط هنا لإرساله على واتساب</a> وهنأكدلك في أقرب وقت.`;
+});
+}
+</script>
+</body>
+</html>
